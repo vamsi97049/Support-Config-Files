@@ -1,0 +1,19 @@
+
+# H2 in memory database configuration
+
+
+# Specify the custom database name 
+spring.datasource.url=jdbc:h2:file:./data/<DatabseName>
+
+# H2 driver 
+spring.datasource.driverClassName=org.h2.Driver
+
+# Login credentials ( we customize login credentials [ credentials are not fixed ]
+spring.datasource.username=<UserName>
+spring.datasource.password=<Password>
+
+# Dialect specifications ( processing quesries to respective DB queries )
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+# Enabling access to communicate with H2 DB in web-browser
+spring.h2.console.enabled=true
