@@ -1,0 +1,26 @@
+Syntax to create sequence :
+CREATE SEQUENCE sequence_name
+START WITH start_value
+INCREMENT BY increment_value
+[ MAXVALUE max_value | NOMAXVALUE ]
+[ MINVALUE min_value | NOMINVALUE ]
+[ CYCLE | NOCYCLE ]
+[ CACHE cache_size | NOCACHE ]
+[ ORDER | NOORDER ];
+
+- sequence_name: The name of the sequence you are creating.
+- START WITH start_value: The number at which the sequence starts
+(default is 1).
+- INCREMENT BY increment_value: The value by which the sequence is
+incremented (default is 1).
+- MAXVALUE max_value: The maximum value that the sequence can generate
+(default is NO MAXVALUE, which means the sequence can generate values up
+to the maximum value allowed by the datatype).
+- MINVALUE min_value: The minimum value that the sequence can generate
+(default is 1).
+- CYCLE | NOCYCLE: Specifies whether the sequence should start from the
+MINVALUE again once the MAXVALUE is reached. CYCLE allows it, while
+NOCYCLE does not.
+- CACHE cache_size: Specifies the number of sequence numbers to cache for
+faster access. Default is 20. - ORDER | NOORDER: Determines whether the sequence will guarantee the
+order of numbers or not (in a RAC environment).
