@@ -17,3 +17,25 @@ spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 
 # Enabling access to communicate with H2 DB in web-browser
 spring.h2.console.enabled=true
+
+
+
+
+
+
+
+or 
+
+
+
+
+
+# file:./data/testdb
+spring.datasource.url=jdbc:h2:mem:test
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=amita
+spring.datasource.password=amita
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+spring.h2.console.enabled=true
+
